@@ -1,0 +1,37 @@
+#!/usr/bin/env bash
+# What is this file? https://github.com/adriancooney/Taskfile
+
+# Enable stricter Bash http://redsymbol.net/articles/unofficial-bash-strict-mode/+
+set -Euo pipefail
+
+# Install all the things!
+function install {
+  install-cdk
+}
+
+# Globally install CDK and plugins
+function install-cdk {
+  echo "📦 Installing aws-cdk"
+  npm install -g aws-cdk
+}
+
+# Run all unit tests
+function test {
+  echo
+  echo
+}
+
+# Login to SSO using yawsso and the AWS_PROFILE environment variable
+function login {
+  yawsso login --profile "${AWS_PROFILE}"
+}
+
+function help {
+  echo "USAGE:"
+  echo "  $0 <task> <args>"
+  echo "Tasks:"
+  compgen -A function | cat -n
+}
+
+TIMEFORMAT="Task completed in %3lR"
+time "${@:-help}"
