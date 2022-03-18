@@ -1,8 +1,6 @@
-# Universal LTI Tool - Frontend
+# React Template Base
 
-This LTI Tool should provide the capability to test all the LTI services provided by an LMS, allowing to review anc
-control the items that are sent between components.
-
+This is a template for a React project
 ## Prerequisites
 
 You should use Node v. 16 for this project

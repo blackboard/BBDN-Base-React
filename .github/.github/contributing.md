@@ -103,11 +103,11 @@ pip-sync
 
 ## Useful CDK commands
 
-- `cdk ls` list all stacks in the app
-- `cdk synth` emits the synthesized CloudFormation template
-- `cdk deploy` deploy this stack to your default AWS account/region
-- `cdk diff` compare deployed stack with current state
-- `cdk docs` open CDK documentation
+-   `cdk ls` list all stacks in the app
+-   `cdk synth` emits the synthesized CloudFormation template
+-   `cdk deploy` deploy this stack to your default AWS account/region
+-   `cdk diff` compare deployed stack with current state
+-   `cdk docs` open CDK documentation
 
 [getting-started]: https://docs.aws.amazon.com/cdk/latest/guide/getting_started.html
 [black]: https://github.com/psf/black

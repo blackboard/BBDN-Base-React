@@ -4,6 +4,11 @@
 # Enable stricter Bash http://redsymbol.net/articles/unofficial-bash-strict-mode/+
 set -Euo pipefail
 
+function evn{
+  nvm install
+  npm install
+}
+
 # Install all the things!
 function install {
   install-cdk

@@ -1,6 +1,6 @@
-import logo from "./pages/home/logo.svg";
-import "./App.css";
-import Home from "./pages/home/home";
+import './App.css';
+import Home from './pages/home/home';
+import React from 'react';
 
 /**
  * Index Component for the application
@@ -8,11 +8,11 @@ import Home from "./pages/home/home";
  * @constructor
  */
 function App() {
-  return (
-    <div className="App">
-      <Home />
-    </div>
-  );
+    return (
+        <div className="App">
+            <Home />
+        </div>
+    );
 }
 
 export default App;

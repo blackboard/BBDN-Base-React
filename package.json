@@ -1,42 +1,67 @@
 {
-  "name": "bbdn-base-react",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "core-js": "^3.21.1",
-    "i18next": "^21.6.14",
-    "jest": "^27.5.1",
-    "loadash": "^1.0.0",
-    "lodash": "^4.17.21",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "react-i18next": "^11.15.7",
-    "react-scripts": "^5.0.0",
-    "web-vitals": "^2.1.4",
-    "yarn": "^1.22.17"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  }
+    "name": "bbdn-base-react",
+    "version": "0.1.0",
+    "private": true,
+    "dependencies": {
+        "core-js": "^3.21.1",
+        "i18next": "^21.6.14",
+        "jest": "^27.5.1",
+        "jest-dom": "^4.0.0",
+        "loadash": "^1.0.0",
+        "lodash": "^4.17.21",
+        "react": "^17.0.2",
+        "react-dom": "^17.0.2",
+        "react-i18next": "^11.15.7",
+        "react-scripts": "^5.0.0",
+        "web-vitals": "^2.1.4",
+        "yarn": "^1.22.17"
+    },
+    "scripts": {
+        "start": "nodemon --exec babel-node src/app.js",
+        "build": "react-scripts build",
+        "test": "react-scripts test",
+        "eject": "react-scripts eject",
+        "prepare": "husky install",
+        "ng": "nx",
+        "nx": "nx"
+    },
+    "browserslist": {
+        "production": [
+            ">0.2%",
+            "not dead",
+            "not op_mini all"
+        ],
+        "development": [
+            "last 1 chrome version",
+            "last 1 firefox version",
+            "last 1 safari version"
+        ]
+    },
+    "devDependencies": {
+        "@babel/cli": "^7.17.6",
+        "@babel/core": "^7.17.7",
+        "@babel/eslint-parser": "^7.17.0",
+        "@babel/node": "^7.16.8",
+        "@babel/preset-env": "^7.16.11",
+        "@testing-library/jest-dom": "^5.16.2",
+        "@testing-library/react": "^12.1.4",
+        "cross-env": "^7.0.3",
+        "eslint": "^7.32.0",
+        "eslint-config-prettier": "^7.2.0",
+        "eslint-plugin-jest": "^26.1.1",
+        "eslint-plugin-prettier": "^4.0.0",
+        "eslint-plugin-react": "^7.29.4",
+        "husky": "^7.0.4",
+        "lint-staged": "^12.3.7",
+        "nodemon": "^2.0.15",
+        "prettier": "^2.6.0"
+    },
+    "test": "cross-env CI=true react-scripts test",
+    "test:watch": "react-scripts test --watchAll",
+    "lint-staged": {
+        "*.{js,jsx,ts,tsx}": [
+            "prettier --write .",
+            "eslint --fix ."
+        ]
+    }
 }
